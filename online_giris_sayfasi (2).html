@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapadokya Üniversitesi Giriş</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .login-box {
+      text-align: center;
+      margin: 100px auto;
+      max-width: 400px;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .login-box input, .login-box button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    #profile-section {
+      display: none;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+    .header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .section h2 {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-section" class="login-box">
+    <h2>Öğrenci Girişi</h2>
+    <input type="text" id="username" placeholder="Kullanıcı Adı">
+    <input type="password" id="password" placeholder="Şifre">
+    <button onclick="login()">Giriş Yap</button>
+    <p style="color:gray;font-size:0.8em;">Kullanıcı: fatihcelebi | Şifre: 2024gsmyuksek</p>
+  </div>
+
+  <div id="profile-section" class="container">
+    <div class="header">
+      <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Fatih Çelebi">
+      <div>
+        <h1>Fatih Çelebi</h1>
+        <p>Kapadokya Üniversitesi<br>Gastronomi ve Mutfak Sanatları (Tezsiz Yüksek Lisans)</p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Öğrenci Bilgileri</h2>
+      <p><strong>Öğrenci No:</strong> 202428001</p>
+      <p><strong>Dönem:</strong> 2024 - 2028</p>
+      <p><strong>Danışman:</strong> Dr. Öğr. Üyesi Ayşe Yılmaz</p>
+      <p><strong>Mail:</strong> fatih.celebi@kapadokya.edu.tr</p>
+    </div>
+    <div class="section">
+      <h2>Alınan Dersler</h2>
+      <ul>
+        <li>GAST501 - Gastronomi Tarihi ve Kültürü</li>
+        <li>GAST503 - İleri Düzey Pişirme Teknikleri</li>
+        <li>GAST504 - Yiyecek ve İçecek İşletmeciliği</li>
+        <li>GAST507 - Gıda Güvenliği ve Hijyen</li>
+        <li>GAST510 - Dünya Mutfakları</li>
+        <li>GAST512 - Menü Planlama ve Tasarımı</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Hakkımda</h2>
+      <p>Ben Fatih Çelebi, Kapadokya Üniversitesi'nde Gastronomi ve Mutfak Sanatları alanında yüksek lisans yapıyorum. Amacım, Türk mutfağını modern tekniklerle birleştirerek gastronomi dünyasına katkı sunmak.</p>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username === 'fatihcelebi' && password === '2024gsmyuksek') {
+        document.getElementById('login-section').style.display = 'none';
+        document.getElementById('profile-section').style.display = 'block';
+      } else {
+        alert('Kullanıcı adı veya şifre yanlış');
+      }
+    }
+  </script>
+</body>
+</html>
